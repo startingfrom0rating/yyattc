@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
+}
+
+.password-input {
+  padding: 8px;
+  margin: 10px;
+  font-size: 12px;
+}
+
+button {
+  padding: 8px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid white; /* Typing cursor effect */
+  animation: typing 3s steps(20, end);
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: auto;
+  }
+}

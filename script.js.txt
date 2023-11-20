@@ -1,0 +1,17 @@
+function checkPassword() {
+  const password = document.getElementById('passwordInput').value;
+
+  // Change the password here
+  const correctPassword = 'Access301'; // Change 'yourpassword' to the desired password
+
+  if (password === correctPassword) {
+    // ... (rest of the code for correct password)
+  } else {
+    // Change the error message here
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.innerText = 'INCORRECT PASSWORD.'; // Change 'Password is wrong.' to your desired error message
+    errorMessage.classList.remove('error-message');
+    void errorMessage.offsetWidth; // Trigger reflow to restart animation
+    errorMessage.classList.add('error-message');
+  }
+}
