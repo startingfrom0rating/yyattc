@@ -1,6 +1,6 @@
 const text = "Y.Y.A.C.C";
 let index = 0;
-let speed = 100; // Speed of typing animation in milliseconds
+let speed = 600; // Speed of typing animation in milliseconds
 
 function typeWriter() {
   if (index < text.length) {
