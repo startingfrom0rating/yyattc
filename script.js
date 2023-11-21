@@ -36,10 +36,15 @@ function typeWriter() {
         setTimeout(function() {
           grantedMessage.remove();
           redirectMessage.remove();
+
           const gif = document.createElement("img");
           gif.src = "ezgif-4-378bee2568.gif"; // Replace with the local path of your GIF
           gif.style.width = "200px"; // Adjust width if needed
           gif.style.height = "200px"; // Adjust height if needed
+          gif.style.position = "absolute";
+          gif.style.top = "50%";
+          gif.style.left = "50%";
+          gif.style.transform = "translate(-50%, -50%)";
           document.body.appendChild(gif);
 
           setTimeout(function() {
