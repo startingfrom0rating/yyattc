@@ -1,6 +1,6 @@
 const text = "Y.Y.A.C.C";
 let index = 0;
-let speed = 700; // Speed of typing animation in milliseconds
+let speed = 500; // Speed of typing animation in milliseconds
 
 function typeWriter() {
   if (index < text.length) {
@@ -23,7 +23,7 @@ function typeWriter() {
 
         setTimeout(function() {
           window.location.href = "https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit";
-        }, 5000); // Redirect after 5 seconds (adjust as needed)
+        }, 2000); // Redirect after 5 seconds (adjust as needed)
       } else {
         document.getElementById("errorMessage").textContent = "Incorrect, contact website owner.";
       }
