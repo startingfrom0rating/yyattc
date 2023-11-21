@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Entry animation -->
+    <div id="entry-animation">
+      <!-- Text for animation -->
+      <h1 id="animation-text" class="hidden"></h1>
+    </div>
 
+    <!-- Password entry section -->
+    <div id="password-entry" class="hidden">
+      <h2>Enter Password</h2>
+      <!-- Password input box -->
+      <input type="password" id="passwordInput" class="password-input">
+      <!-- Button to submit password -->
+      <button onclick="checkPassword()">Submit</button>
+      <!-- Error message display -->
+      <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <!-- Animated GIF section -->
+    <div id="animation" class="hidden">
+      <!-- GIF animation -->
+      <img src="ezgif-4-378bee2568.gif" alt="Animation">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
