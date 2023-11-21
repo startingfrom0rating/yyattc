@@ -1,42 +1,32 @@
-// Entry animation - Typewriter effect
-const text = "Y.Y.A.C.C"; // Text to be animated
-let charIndex = 0;
-const animationText = document.getElementById('animation-text');
+const text = "Y.Y.A.C.C";
+let index = 0;
+let speed = 100; // Speed of typing animation in milliseconds
 
 function typeWriter() {
-  if (charIndex < text.length) {
-    animationText.innerHTML += text.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeWriter, 200); // Speed of typing animation (adjust as needed)
+  if (index < text.length) {
+    document.querySelector(".typing-text").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, speed);
   } else {
-    // Once animation is complete, display password entry
-    document.getElementById('password-entry').classList.remove('hidden');
+    document.getElementById("entryAnimation").style.display = "none";
+    document.querySelector(".password-box").style.display = "block";
   }
 }
 
-// Initiate entry animation
-typeWriter();
+// Start typing animation when the page loads
+window.onload = function() {
+  typeWriter();
+};
 
-// Password check
 function checkPassword() {
-  const password = document.getElementById('passwordInput').value;
+  const enteredPassword = document.getElementById("passwordInput").value;
 
-  // Set your password here
-  const correctPassword = 'Origins'; // Replace with your actual password
-
-  if (password === correctPassword) {
-    document.body.style.backgroundColor = '#000'; // Apply background color again
-    document.getElementById('password-entry').classList.add('hidden');
-    document.getElementById('animation').classList.remove('hidden');
-
-    // Redirection after GIF animation
-    const animation = document.getElementById('animation').querySelector('img');
-    animation.addEventListener('load', function() {
-      window.location.href = 'https://www.redirected-website.com'; // Replace with your desired URL
-    });
+  if (enteredPassword === "Origins") {
+    // Redirect to another site after successful password entry
+    window.location.href = "https://your-redirect-site.com";
+    // You may load the gif here, but due to security restrictions,
+    // loading from GitHub directly may not work without server-side access
   } else {
-    // Display error message for incorrect password
-    const errorMessage = document.getElementById('errorMessage');
-    errorMessage.innerText = 'Incorrect, contact website owner.';
+    document.getElementById("errorMessage").innerHTML = "Incorrect, contact website owner.";
   }
 }
