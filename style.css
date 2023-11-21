@@ -1,30 +1,41 @@
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Times New Roman', Times, serif;
+// Entry animation - Typewriter effect
+const text = "Y.Y.A.C.C"; // Text to be animated
+let charIndex = 0;
+const animationText = document.getElementById('animation-text');
+
+function typeWriter() {
+  if (charIndex < text.length) {
+    animationText.innerHTML += text.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 200); // Speed of typing animation (adjust as needed)
+  } else {
+    // Once animation is complete, display password entry
+    document.getElementById('password-entry').classList.remove('hidden');
+  }
 }
 
-.container {
-  text-align: center;
-}
+// Initiate entry animation
+typeWriter();
 
-.hidden {
-  display: none;
-}
+// Password check
+function checkPassword() {
+  const password = document.getElementById('passwordInput').value;
 
-.password-input {
-  padding: 8px;
-  margin: 10px;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-}
+  // Set your password here
+  const correctPassword = 'Origins'; // Replace with your actual password
 
-.error-message {
-  color: red;
+  if (password === correctPassword) {
+    document.getElementById('password-entry').classList.add('hidden');
+    document.getElementById('animation').classList.remove('hidden');
+
+    // Redirection after GIF animation
+    const animation = document.getElementById('animation').querySelector('img');
+    animation.addEventListener('load', function() {
+      window.location.href = 'https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit?usp=sharing'; // Replace with your desired URL
+    });
+  } else {
+    // Display error message for incorrect password
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.innerText = 'Incorrect, contact website owner.';
+  }
 }
