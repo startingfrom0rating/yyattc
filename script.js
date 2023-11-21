@@ -1,10 +1,10 @@
 const text = "Y.Y.A.C.C";
 let index = 0;
-let speed = 100; // Speed of typing animation in milliseconds
+let speed = 400; // Speed of typing animation in milliseconds
 
 function typeWriter() {
   if (index < text.length) {
-    document.querySelector(".typing-text").innerHTML += text.charAt(index);
+    document.querySelector(".typing-text").textContent += text.charAt(index);
     index++;
     setTimeout(typeWriter, speed);
   } else {
@@ -27,6 +27,6 @@ function checkPassword() {
     // You may load the gif here, but due to security restrictions,
     // loading from GitHub directly may not work without server-side access
   } else {
-    document.getElementById("errorMessage").innerHTML = "Incorrect, contact website owner.";
+    document.getElementById("errorMessage").textContent = "Incorrect, contact website owner.";
   }
 }
