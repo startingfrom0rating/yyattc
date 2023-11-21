@@ -1,1 +1,36 @@
-const _0x40f137=_0x257c;function _0x5774(){const _0x2a984c=['2YFpFSI','Y.Y.A.C.C','block','223263CsrLqQ','createElement','671738ESuXbA','18tZDzqL','location','img','body','width','733557PYSVgU','href','getElementById','appendChild','204421OAqchC','Origins','216rHghVy','11icUeFJ','none','.typing-text','errorMessage','length','textContent','querySelector','src','2435uihjbu','style','passwordInput','value','entryAnimation','https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit','1268vELSSg','5053970puruCM','Incorrect,\x20contact\x20website\x20owner.','ezgif-4-378bee2568.gif','4986660lGJbfS','200px'];_0x5774=function(){return _0x2a984c;};return _0x5774();}(function(_0x39432c,_0x10080e){const _0x14d5bf=_0x257c,_0x562b3f=_0x39432c();while(!![]){try{const _0x139ed0=-parseInt(_0x14d5bf(0x94))/0x1+-parseInt(_0x14d5bf(0x8f))/0x2*(parseInt(_0x14d5bf(0x9a))/0x3)+-parseInt(_0x14d5bf(0x89))/0x4*(parseInt(_0x14d5bf(0x83))/0x5)+-parseInt(_0x14d5bf(0x95))/0x6*(parseInt(_0x14d5bf(0x9e))/0x7)+-parseInt(_0x14d5bf(0xa0))/0x8*(-parseInt(_0x14d5bf(0x92))/0x9)+parseInt(_0x14d5bf(0x8a))/0xa+-parseInt(_0x14d5bf(0xa1))/0xb*(-parseInt(_0x14d5bf(0x8d))/0xc);if(_0x139ed0===_0x10080e)break;else _0x562b3f['push'](_0x562b3f['shift']());}catch(_0xf3bbf2){_0x562b3f['push'](_0x562b3f['shift']());}}}(_0x5774,0x69970));const text=_0x40f137(0x90);let index=0x0,speed=0x64;function typeWriter(){const _0x11631b=_0x40f137;if(index<text[_0x11631b(0x7f)])document[_0x11631b(0x81)](_0x11631b(0x7d))[_0x11631b(0x80)]+=text['charAt'](index),index++,setTimeout(typeWriter,speed);else{document[_0x11631b(0x9c)](_0x11631b(0x87))[_0x11631b(0x84)]['display']=_0x11631b(0xa2),document[_0x11631b(0x81)]('.password-box')[_0x11631b(0x84)]['display']=_0x11631b(0x91);const _0x4d2df8=document[_0x11631b(0x93)](_0x11631b(0x97));_0x4d2df8[_0x11631b(0x82)]=_0x11631b(0x8c),_0x4d2df8[_0x11631b(0x84)][_0x11631b(0x99)]='200px',_0x4d2df8['style']['height']=_0x11631b(0x8e),document[_0x11631b(0x98)][_0x11631b(0x9d)](_0x4d2df8),setTimeout(function(){const _0x23a021=_0x11631b,_0x2bdd9f=document['getElementById'](_0x23a021(0x85))[_0x23a021(0x86)];_0x2bdd9f===_0x23a021(0x9f)?window[_0x23a021(0x96)][_0x23a021(0x9b)]=_0x23a021(0x88):document[_0x23a021(0x9c)](_0x23a021(0x7e))[_0x23a021(0x80)]=_0x23a021(0x8b);},0x1388);}}function _0x257c(_0x1be13f,_0x311deb){const _0x577477=_0x5774();return _0x257c=function(_0x257cf0,_0x46f38f){_0x257cf0=_0x257cf0-0x7d;let _0x28b54f=_0x577477[_0x257cf0];return _0x28b54f;},_0x257c(_0x1be13f,_0x311deb);}window['onload']=function(){typeWriter();};
+const text = "Y.Y.A.C.C";
+let index = 0;
+let speed = 100; // Speed of typing animation in milliseconds
+
+function typeWriter() {
+  if (index < text.length) {
+    document.querySelector(".typing-text").textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, speed);
+  } else {
+    document.getElementById("entryAnimation").style.display = "none";
+    document.querySelector(".password-box").style.display = "block";
+
+    // Display the GIF after the typing animation completes
+    const gif = document.createElement("img");
+    gif.src = "ezgif-4-378bee2568.gif"; // Replace with the local path of your GIF
+    gif.style.width = "200px"; // Adjust width if needed
+    gif.style.height = "200px"; // Adjust height if needed
+    document.body.appendChild(gif);
+
+    // Redirect after a delay following the GIF display
+    setTimeout(function() {
+      const enteredPassword = document.getElementById("passwordInput").value;
+      if (enteredPassword === "Origins") {
+        window.location.href = "https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit";
+      } else {
+        document.getElementById("errorMessage").textContent = "Incorrect, contact website owner.";
+      }
+    }, 5000); // Redirect after 5 seconds (adjust as needed)
+  }
+}
+
+// Start typing animation when the page loads
+window.onload = function() {
+  typeWriter();
+};
