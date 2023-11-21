@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #000;
+  background-color: #000; /* Matte black background */
   color: #fff;
   font-family: 'Times New Roman', Times, serif;
 }

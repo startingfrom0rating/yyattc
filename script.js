@@ -25,13 +25,14 @@ function checkPassword() {
   const correctPassword = 'Origins'; // Replace with your actual password
 
   if (password === correctPassword) {
+    document.body.style.backgroundColor = '#000'; // Apply background color again
     document.getElementById('password-entry').classList.add('hidden');
     document.getElementById('animation').classList.remove('hidden');
 
     // Redirection after GIF animation
     const animation = document.getElementById('animation').querySelector('img');
     animation.addEventListener('load', function() {
-      window.location.href = 'https://https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/'; // Replace with your desired URL
+      window.location.href = 'https://www.redirected-website.com'; // Replace with your desired URL
     });
   } else {
     // Display error message for incorrect password
