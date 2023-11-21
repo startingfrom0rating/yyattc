@@ -1,5 +1,5 @@
-// Entry animation
-const text = "Y.Y.A.C.C"; // Replace with your desired text
+// Entry animation - Typewriter effect
+const text = "Y.Y.A.C.C"; // Text to be animated
 let charIndex = 0;
 const animationText = document.getElementById('animation-text');
 
@@ -9,10 +9,12 @@ function typeWriter() {
     charIndex++;
     setTimeout(typeWriter, 200); // Speed of typing animation (adjust as needed)
   } else {
+    // Once animation is complete, display password entry
     document.getElementById('password-entry').classList.remove('hidden');
   }
 }
 
+// Initiate entry animation
 typeWriter();
 
 // Password check
@@ -28,13 +30,12 @@ function checkPassword() {
 
     // Redirection after GIF animation
     const animation = document.getElementById('animation').querySelector('img');
-    animation.addEventListener('animationend', function() {
-      window.location.href = 'hhttps://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit?usp=sharing'; // Replace with your desired URL
+    animation.addEventListener('load', function() {
+      window.location.href = 'https://https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/'; // Replace with your desired URL
     });
   } else {
     // Display error message for incorrect password
     const errorMessage = document.getElementById('errorMessage');
-    errorMessage.innerText = 'Incorrect password. Try again.';
+    errorMessage.innerText = 'Incorrect, contact website owner.';
   }
 }
-
