@@ -22,7 +22,7 @@ function typeWriter() {
         document.body.appendChild(gif);
 
         setTimeout(function() {
-          window.location.href = "https://docs.google.com/document/d/1CvLDK8cSuxz-Gv8-FjUjNHgIzv5Hhyuqz4PE1R7MqNk/edit";
+          window.location.href = "https://bit.ly/3N0VJL9";
         }, 2000); // Redirect after 5 seconds (adjust as needed)
       } else {
         document.getElementById("errorMessage").textContent = "Incorrect, contact website owner.";
