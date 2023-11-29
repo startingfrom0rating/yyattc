@@ -44,3 +44,4 @@ function typeWriter() {
 window.onload = function() {
   typeWriter();
 };
+// this is a message
